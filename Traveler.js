@@ -15,7 +15,7 @@ class Traveler {
             this.isHealthy = false
         }
         else {
-            this.food = -1
+            --this.food
         }
     }
 

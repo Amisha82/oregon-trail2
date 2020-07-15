@@ -14,18 +14,15 @@ class Wagon {
     }
     shouldQuarantine() {
         for (let i = 0; i < this.passengers.length; i++) {
-            if (this.passengers[i].isHealthy === true) {
+            if (this.passengers[i].isHealthy === false) {
                 return true
-            }
-            else {
-                return false
             }
         }
     }
     totalFood() {
         let totfood = 0
         if (this.shouldQuarantine() === true) {
-            this.passengers.pop()
+
         }
         for (let j = 0; j < this.passengers.length; j++) {
             console.log(this.passengers[j].getfood())
