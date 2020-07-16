@@ -17,6 +17,9 @@ class Wagon {
             if (this.passengers[i].isHealthy === false) {
                 return true
             }
+            else {
+                return false
+            }
         }
     }
     totalFood() {
