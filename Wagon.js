@@ -9,7 +9,7 @@ class Wagon {
     }
     join(traveler) {
         if (this.getAvailableSeatCount() > 0) {
-            this.passengers.push(traveler)
+            return this.passengers.push(traveler)
         }
     }
     shouldQuarantine() {
@@ -17,16 +17,11 @@ class Wagon {
             if (this.passengers[i].isHealthy === false) {
                 return true
             }
-            else {
-                return false
-            }
         }
+        return false
     }
     totalFood() {
         let totfood = 0
-        if (this.shouldQuarantine() === true) {
-
-        }
         for (let j = 0; j < this.passengers.length; j++) {
             console.log(this.passengers[j].getfood())
             totfood = totfood + this.passengers[j].getfood()
